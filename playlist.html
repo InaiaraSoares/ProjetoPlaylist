@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+   // diretorio = "playlist";
+    musicas = ["01", "02","03","04","05","06",];
+    musicaAtual = 0;        
+    next = function() {
+        musicaAtual ++;
+        //document.getElementById("player-source").setAttribute("src", diretorio+musicas[musicaAtual]+".mp3");
+		document.getElementById("player-source").setAttribute("src", musicas[musicaAtual]+".mp3");
+        document.getElementById("player").load();
+    };
+</script>
+</head>
+<body>
+		<audio id="player" preload autoplay controls>
+     <source id="player-source" src="playlist/01.mp3" type="audio/mpeg"/>        
+</audio>
+<input type="button" value="Próximo" onclick="next();"/>
+</body>
+</html>
